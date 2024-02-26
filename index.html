@@ -36,18 +36,18 @@
       <span class="material-icons">content_paste</span>
       <select type="text" class="font-family-prop"></select>
       <select type="text" class="font-size-prop"></select>
-      <span class="material-icons">format_bold</span>
-      <span class="material-icons">format_italic</span>
-      <span class="material-icons">format_underlined</span>
-      <span class="material-icons">format_align_left</span>
-      <span class="material-icons">format_align_center</span>
-      <span class="material-icons">format_align_right</span>
+      <span class="material-icons bold">format_bold</span>
+      <span class="material-icons italic">format_italic</span>
+      <span class="material-icons underline">format_underlined</span>
+      <span class="material-icons alignment">format_align_left</span>
+      <span class="material-icons alignment">format_align_center</span>
+      <span class="material-icons alignment">format_align_right</span>
       <div class="color-picker-text">
-        <span class="material-icons">format_color_text</span>
+        <span class="material-icons color">format_color_text</span>
         <input type="color" class="input-color-text" />
       </div>
       <div class="color-picker-fill">
-        <span class="material-icons">format_color_fill</span>
+        <span class="material-icons bg-color">format_color_fill</span>
         <input type="color" class="input-color-fill" />
       </div>
     </div>
@@ -65,10 +65,10 @@
     </div>
     <div class="grid-container">
       <div class="top-left-dummy"></div>
-      <div class="address-col-container"></div>
+      <div class="address-row-container"></div>
 
       <div class="cells-container">
-        <div class="address-row-container"></div>
+        <div class="address-col-container"></div>
       </div>
     </div>
     <div class="sheet-actions-container">
@@ -80,6 +80,7 @@
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./grid.js"></script>
+    <script src="./cell-properties.js"></script>
   </body>
 </html>

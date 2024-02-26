@@ -21,6 +21,13 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.hide{
+    display: none;
+}
+.active{
+    display:block
+}
+
 
 .page-actions-container {
     height: 3rem;
@@ -147,7 +154,7 @@ body {
     z-index: 2;
 }
 
-.address-col-container {
+.address-row-container {
 
     background-color: aquamarine;
 
@@ -161,14 +168,14 @@ body {
 
 }
 
-.address-col {
+.address-row {
     height: 2rem;
     width: 2rem;
     text-align: center;
     border: 1px solid gray;
 }
 
-.address-row {
+.address-col {
     height: 2rem;
     width: 5rem;
     text-align: center;
@@ -183,7 +190,7 @@ body {
     top: 0;
 }
 
-.address-row-container {
+.address-col-container {
     background-color: var(--cell-top-left-corner);
     display: flex;
     top: 0;
@@ -200,4 +207,29 @@ body {
     height: 2rem;
     width: 5rem;
     border: 1px solid gainsboro;
+}
+
+
+
+.color-picker-text,.color-picker-fill{
+    position: relative;
+}
+
+.color-picker-text > input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+
+.color-picker-fill> input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+width: 100%;
+
 }

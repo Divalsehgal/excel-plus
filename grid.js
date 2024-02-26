@@ -15,27 +15,26 @@ document.addEventListener("DOMContentLoaded", async function () {
     const addressRowCont = document.querySelector(".address-row-container")
     const cells = document.querySelector(".cells-container")
 
-
-    // left side columns [1-100]
+    // left side rows [1-100]
     for (let i = 0; i < rows; i++) {
-        let addressCol = document.createElement("div")
-        addressCol.innerText = i + 1;
-        addressCol.setAttribute("class", "address-col")
-        addressColCont.appendChild(addressCol)
-    }
-
-    // top header row [A-Z]
-    for (let i = 0; i < cols; i++) {
         let addressRow = document.createElement("div")
-        addressRow.innerText = String.fromCharCode(65 + i);
+        addressRow.innerText = i + 1;
         addressRow.setAttribute("class", "address-row")
         addressRowCont.appendChild(addressRow)
+    }
+
+    // top header col [A-Z]
+    for (let i = 0; i < cols; i++) {
+        let addressCol = document.createElement("div")
+        addressCol.innerText = String.fromCharCode(65 + i);
+        addressCol.setAttribute("class", "address-col")
+        addressColCont.appendChild(addressCol)
     }
 
     //function : selecting address
     function markAddress(cell, i, j) {
         cell.addEventListener("click", () => {
-            addressBarInput.value = `${String.fromCharCode(65 + j)}${i}`
+            addressBarInput.value = `${String.fromCharCode(65 + j)}${i+1}`
         })
     }
 
@@ -47,6 +46,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             let cell = document.createElement("div");
             cell.setAttribute("class", "cell");
             cell.setAttribute("contenteditable", "true");
+            cell.setAttribute("rid", i);
+            cell.setAttribute("cid", j);
+            cell.setAttribute("spellcheck", false);
 
             // selecting address of cell
             markAddress(cell, i, j);
@@ -123,10 +125,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    // cell props function
+    // auto focus on reload to first cell
+    const firstCell = document.querySelector(".cell");
+    firstCell.click()
+    firstCell.focus()
+    
 
-
-
+    console.log(firstCell)
 
 
 });
