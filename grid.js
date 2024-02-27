@@ -129,9 +129,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     const firstCell = document.querySelector(".cell");
     firstCell.click()
     firstCell.focus()
-    
-
-    console.log(firstCell)
 
 
 });

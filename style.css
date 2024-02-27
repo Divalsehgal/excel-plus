@@ -56,6 +56,9 @@ body {
     margin: 0 0.5rem;
 }
 
+.cell-props-action-container>*:hover{
+    cursor: pointer;
+}
 .font-family-prop {
     padding: 0.2rem;
     border: none;
@@ -233,3 +236,5 @@ body {
 width: 100%;
 
 }
+
+
